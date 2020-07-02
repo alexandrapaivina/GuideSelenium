@@ -13,30 +13,42 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverSettings {
 
-   public WebDriver driver;
-   private WebDriverWait wait;
+   public static WebDriver driver;
+   private static WebDriverWait wait;
 
 
     @Before
     public void start() {
+
+        if(driver != null) {
+            return;
+        }
+
         System.setProperty("webdriver.chrome.driver","/Users/dev/AuxiliaryExecutables/chromedriver");
         System.setProperty("webdriver.gecko.driver", "/Users/dev/AuxiliaryExecutables//geckodriver");
 
-        //driver = new ChromeDriver();
+        driver = new ChromeDriver();
         //driver = new SafariDriver();
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         wait = new WebDriverWait(driver,10);
 
        /* DesiredCapabilities caps = new DesiredCapabilities();
           caps.setCapability("unexpectedAlertBehaviour","dismiss");
           caps.setCapability("setWindowRect","false");
           System.out.println(((HasCapabilities) driver).getCapabilities());*/
+
+        /*Runtime.getRuntime().addShutdownHook(
+                new Thread(() -> {driver.quit(); driver = null;}));*/
     }
 
     @After
     public void stop() {
-        driver.quit();
-        driver = null;
+       driver.quit();
+       driver = null;
+
+
+
+
     }
 
 }
