@@ -10,8 +10,6 @@ import java.util.List;
 
 public class ClickAllMenu extends WebDriverSettings{
 
-  // private By menuItems = By.cssSelector("ul.list-vertical a");
-
     private By menuItems = By.xpath("//li[@id='app-']/a");
     private By menuSubItems = By.cssSelector("ul.docs a");
     private By headingPage = By.cssSelector("h1");
@@ -49,7 +47,7 @@ public class ClickAllMenu extends WebDriverSettings{
             Assert.assertTrue(existsElement(headingPage));
             Thread.sleep(1000);
 
-            //Прокикивает подпункты меню
+            //Прокликивает подпункты меню
             List<WebElement> subItems = seachElements(menuSubItems);
              if (subItems.size() != 0) {
                 for (int j=0;j<subItems.size();j++)
