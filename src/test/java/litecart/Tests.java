@@ -13,8 +13,9 @@ public class Tests extends WebDriverSettings {
     private By buttonLogin = By.name("login");
 
     @Test
-    public void login() {
+    public void login() throws InterruptedException{
         driver.get(urlLoginPage);
+        Thread.sleep(5000);
         driver.findElement(inputUsername).sendKeys("admin");
         driver.findElement(inputPassword).sendKeys("admin");
         driver.findElement(checkboxRememberMe).click();
