@@ -77,19 +77,20 @@ public class CountriesSorting  extends WebDriverSettings{
             countries = seachElements(locatorCountries);
             countries.get(i).click();
             Thread.sleep(1000);
+
             List<WebElement> selectZone = driver.findElements(locatorSelectsZone);
+            ArrayList<WebElement> options = new ArrayList<WebElement>();
             int j=0;
             while ( j != selectZone.size())
             {
                 Select sel = new Select(selectZone.get(j));
-                List<WebElement> options = sel.getOptions();
-                listInAlphabetical(options);
+                options.add(sel.getFirstSelectedOption());
                 j++;
             }
+            listInAlphabetical(options);
             driver.navigate().back();
         }
     }
-
 
     //Поиск элемента
     public List<WebElement> seachElements(By locator) {
