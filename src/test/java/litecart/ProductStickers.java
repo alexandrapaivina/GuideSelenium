@@ -9,9 +9,8 @@ import java.util.List;
 
 public class ProductStickers extends WebDriverSettings{
 
-    private By locatorProducts = By.cssSelector("div.content a.link");
-    private By locatorNew = By.xpath("//div[@title='New']");
-    private By locatorSale = By.xpath("//div[@title='On Sale']");
+    private By locatorProducts = By.cssSelector(".product");
+    private By locatorSticker = By.cssSelector(".sticker:last-child");
 
 
     //Поиск элемента
@@ -27,10 +26,9 @@ public class ProductStickers extends WebDriverSettings{
         Thread.sleep(1000);
 
         List<WebElement> products = seachElements(locatorProducts);
-        List<WebElement> stickersNew = seachElements(locatorNew);
-        List<WebElement> stickersSale = seachElements(locatorSale);
+        List<WebElement> stickers = seachElements(locatorSticker);
 
-        Assert.assertTrue(products.size()==stickersNew.size()+stickersSale.size());
+        Assert.assertTrue(products.size()==stickers.size());
     }
 
 }
