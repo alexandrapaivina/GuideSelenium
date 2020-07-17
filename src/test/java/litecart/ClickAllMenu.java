@@ -1,10 +1,10 @@
 package litecart;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class ClickAllMenu extends WebDriverSettings{
     public void ClikMenu() throws InterruptedException {
 
         //Авторизация
-        Tests log = new Tests();
+        Login log = new Login();
         log.login();
         Thread.sleep(1000);
 

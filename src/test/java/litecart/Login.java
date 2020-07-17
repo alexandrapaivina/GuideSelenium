@@ -1,9 +1,9 @@
 package litecart;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
-public class Tests extends WebDriverSettings {
+public class Login extends WebDriverSettings{
 
     private String urlLoginPage = "http://192.168.64.2/litecart/admin/login.php";
 
@@ -12,10 +12,10 @@ public class Tests extends WebDriverSettings {
     private By checkboxRememberMe = By.name("remember_me");
     private By buttonLogin = By.name("login");
 
-    @Test
+ @Test
     public void login() throws InterruptedException{
         driver.get(urlLoginPage);
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         driver.findElement(inputUsername).sendKeys("admin");
         driver.findElement(inputPassword).sendKeys("admin");
         driver.findElement(checkboxRememberMe).click();
