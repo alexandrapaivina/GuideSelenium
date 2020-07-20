@@ -31,9 +31,9 @@ public class WebDriverSettings {
         System.setProperty("webdriver.chrome.driver","/Users/dev/AuxiliaryExecutables/chromedriver");
         System.setProperty("webdriver.gecko.driver", "/Users/dev/AuxiliaryExecutables//geckodriver");
 
-       //driver = new ChromeDriver();
+       driver = new ChromeDriver();
         //driver = new SafariDriver();
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         wait = new WebDriverWait(driver,50);
         driver.manage().window().maximize();
 
