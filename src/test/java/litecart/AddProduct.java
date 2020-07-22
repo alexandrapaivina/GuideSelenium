@@ -123,10 +123,7 @@ public class AddProduct extends WebDriverSettings{
         product.empHeadTitle("Колесо для складской тачки"+generateNumber());
 
         LocalDate date = LocalDate.now();
-        System.out.println(date.toString());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        System.out.println(date.toString());
-        System.out.println(date.format(formatter));
         product.empDataValidFrom(date.format(formatter));
         product.empDataValidTo(date.plusYears(1).format(formatter));
     }
