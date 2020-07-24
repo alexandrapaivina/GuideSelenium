@@ -20,7 +20,6 @@ public class WorkingBasket extends WebDriverSettings{
     private By locRemoute  = By.cssSelector("button[name *= 'remove']");
     private By locOrder = By.cssSelector("div[id *= 'order']");
     private By locDucks = By.cssSelector("[href = '#']");
-    //private By locTableProducts = By.cssSelector("td[class *= 'item']");
 
     @Test
     public void workingWithBasket() throws InterruptedException{
@@ -67,7 +66,6 @@ public class WorkingBasket extends WebDriverSettings{
         }
     }
 
-    //Поиск элемента
     public List<WebElement> seachElements(By locator) {
         List<WebElement> links = driver.findElements(locator);
         return links;
@@ -91,21 +89,6 @@ public class WorkingBasket extends WebDriverSettings{
         {
             return false;
         }
-    }
-
-    public void clickDelete(WebElement elem){
-        try
-        {
-            wait.until(ExpectedConditions.visibilityOf(elem));
-            elem.click();
-        }
-        catch (NullPointerException e)
-        {
-            System.out.println("Не нашлось");
-        }
-
-
-
     }
 
 
