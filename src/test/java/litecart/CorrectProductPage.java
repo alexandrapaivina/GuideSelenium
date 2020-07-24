@@ -26,7 +26,7 @@ public class CorrectProductPage extends WebDriverSettings{
     //б) на главной странице и на странице товара совпадают цены (обычная и акционная)
     @Test
     public void ProductCorrect() throws InterruptedException {
-        driver.get("http://192.168.64.2/litecart/en/");
+        driver.get("http://localhost//litecart/en/");
 
         Product productBlock = new Product();
         Product productPage = new Product();

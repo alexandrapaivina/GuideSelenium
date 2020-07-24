@@ -68,7 +68,7 @@ public class CountriesSorting  extends WebDriverSettings{
     @Test
     public void sortCountriesInGEO() throws InterruptedException{
         logintAdmin();
-        driver.get("http://192.168.64.2/litecart/admin/?app=geo_zones&doc=geo_zones");
+        driver.get("http://localhost//litecart/admin/?app=geo_zones&doc=geo_zones");
         countries = seachElements(locatorCountries);
 
         //Переход в страну и проверка селектов с зонами

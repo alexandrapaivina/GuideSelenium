@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class Login extends WebDriverSettings{
 
-    private String urlLoginPage = "http://192.168.64.2/litecart/admin/login.php";
+    private String urlLoginPage = "http://localhost//litecart/admin/login.php";
 
     private By inputUsername = By.name("username");
     private By inputPassword = By.name("password");

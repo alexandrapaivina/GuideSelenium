@@ -23,7 +23,7 @@ public class ProductStickers extends WebDriverSettings{
     @Test
     public void availabilityStickers () throws InterruptedException {
 
-        driver.get("http://192.168.64.2/litecart/en/");
+        driver.get("http://localhost//litecart/en/");
         Thread.sleep(1000);
 
         List<WebElement> products = seachElements(locatorProducts);

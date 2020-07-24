@@ -38,7 +38,7 @@ public class Registration extends WebDriverSettings{
     @Test
     public void registration() throws InterruptedException{
 
-        driver.get("http://192.168.64.2/litecart/en/create_account");
+        driver.get("http://localhost//litecart/en/create_account");
         generateUser();
 
         //1) регистрация новой учётной записи с достаточно уникальным адресом электронной почты
