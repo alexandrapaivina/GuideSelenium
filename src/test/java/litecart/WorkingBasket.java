@@ -12,9 +12,6 @@ import java.util.List;
 
 public class WorkingBasket extends WebDriverSettings{
 
-    //JavascriptExecutor ex = (JavascriptExecutor)driver;
-    //Actions actions = new Actions(driver);
-
     private By locProduct = By.cssSelector("[class *= 'product column']");
     private By locAddToBascket = By.cssSelector("[name = 'add_cart_product']");
     private By locBascket = By.cssSelector("span[class = 'quantity']");
@@ -97,8 +94,6 @@ public class WorkingBasket extends WebDriverSettings{
     }
 
     public void clickDelete(WebElement elem){
-
-
         try
         {
             wait.until(ExpectedConditions.visibilityOf(elem));
