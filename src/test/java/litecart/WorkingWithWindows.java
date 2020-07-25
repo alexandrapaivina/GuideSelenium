@@ -31,15 +31,13 @@ public class WorkingWithWindows extends WebDriverSettings{
         String mainWindow = driver.getWindowHandle();
 
         openWindowAndBack(links,mainWindow);
-        Thread.sleep(5000);
     }
 
-    public void openWindowAndBack(List<WebElement> list, String mainWindow) throws InterruptedException{
+    public void openWindowAndBack(List<WebElement> list, String mainWindow){
 
         for(int i=0;i<list.size();i++){
             list.get(i).click();
             Object[] oldWindows = driver.getWindowHandles().toArray();
-            Thread.sleep(5000);
             String newWindow = findFirstNewWindow(oldWindows,mainWindow);
             Assert.assertNotNull(newWindow);
             driver.switchTo().window(newWindow);
