@@ -37,8 +37,8 @@ public class WorkingWithWindows extends WebDriverSettings{
 
         for(int i=0;i<list.size();i++){
             list.get(i).click();
-            Object[] oldWindows = driver.getWindowHandles().toArray();
-            String newWindow = findFirstNewWindow(oldWindows,mainWindow);
+            Object[] allWindows = driver.getWindowHandles().toArray();
+            String newWindow = findFirstNewWindow(allWindows,mainWindow);
             Assert.assertNotNull(newWindow);
             driver.switchTo().window(newWindow);
             driver.close();
