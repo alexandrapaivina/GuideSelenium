@@ -1,6 +1,5 @@
-package litecart;
+package Other;
 
-import litecart.WebDriverSettings;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 

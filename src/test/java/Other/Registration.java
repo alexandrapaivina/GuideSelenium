@@ -1,4 +1,4 @@
-package litecart;
+package Other;
 
 import litecart.model.User;
 import org.openqa.selenium.By;

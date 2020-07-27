@@ -1,4 +1,4 @@
-package litecart;
+package litecart.tests;
 
 import litecart.app.Application;
 import org.testng.annotations.BeforeClass;

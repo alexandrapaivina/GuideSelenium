@@ -1,6 +1,5 @@
 package litecart.tests;
 
-import litecart.TestBase;
 import org.testng.annotations.Test;
 
 public class WorkingBasket extends TestBase {

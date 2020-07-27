@@ -1,4 +1,4 @@
-package litecart;
+package Other;
 
 import litecart.model.Product;
 import org.openqa.selenium.*;
