@@ -1,15 +1,15 @@
-package litecart;
+package litecart.model;
 
 public class User {
-    String email;
-    String pass;
-    String firstName;
-    String lastName;
-    String adress1;
-    String city;
-    String phone;
-    String country;
-    Integer postCod;
+    public String email;
+    public String pass;
+    public String firstName;
+    public String lastName;
+    public String adress1;
+    public String city;
+    public String phone;
+    public String country;
+    public Integer postCod;
 
     public void empEmail(String  empEmail){ email =  empEmail; }
     public void empPass(String  empPass){ pass =  empPass; }

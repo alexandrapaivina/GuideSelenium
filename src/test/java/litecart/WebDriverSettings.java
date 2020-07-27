@@ -34,7 +34,7 @@ public class WebDriverSettings {
         driver = new ChromeDriver();
         //driver = new SafariDriver();
         //driver = new FirefoxDriver();
-        wait = new WebDriverWait(driver,20);
+        wait = new WebDriverWait(driver,50);
         driver.manage().window().maximize();
 
        /* DesiredCapabilities caps = new DesiredCapabilities();

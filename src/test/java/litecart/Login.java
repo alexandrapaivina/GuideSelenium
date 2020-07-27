@@ -1,9 +1,10 @@
 package litecart;
 
+import litecart.WebDriverSettings;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class Login extends WebDriverSettings{
+public class Login extends WebDriverSettings {
 
     private String urlLoginPage = "http://localhost//litecart/admin/login.php";
 

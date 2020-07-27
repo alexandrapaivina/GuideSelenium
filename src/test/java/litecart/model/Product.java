@@ -1,22 +1,22 @@
-package litecart;
+package litecart.model;
 
 
 
 public class Product {
-    String name;
-    String code;
-    String quantity;
-    String dataValidFrom;
-    String dataValidTo;
-    String description;
-    String keywords;
-    String shortDescription;
-    String headTitle;
-    String metaDescription;
-    String priceUSD;
-    String priceEUR;
-    String priceRegular;
-    String priceSale;
+    public String name;
+    public String code;
+    public String quantity;
+    public String dataValidFrom;
+    public String dataValidTo;
+    public String description;
+    public String keywords;
+    public String shortDescription;
+    public String headTitle;
+    public String metaDescription;
+    public String priceUSD;
+    public String priceEUR;
+    public String priceRegular;
+    public String priceSale;
 
     public void empName(String  empName){
         name =  empName;
