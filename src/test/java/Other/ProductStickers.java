@@ -1,7 +1,7 @@
 package Other;
 
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,9 +10,20 @@ import java.util.List;
 
 public class ProductStickers extends WebDriverSettings{
 
-    private By locatorProducts = By.cssSelector(".product");
-    private By locatorSticker = By.cssSelector(".sticker:last-child");
+    private By locProducts = By.cssSelector(".product");
+    private By locSticker = By.cssSelector(".sticker");
 
+    @Test
+    public void availabilityStickers () throws InterruptedException {
+
+        driver.get("http://localhost/litecart/en/");
+
+        List<WebElement> products = seachElements(locProducts);
+
+        for(int i=0;i<products.size();i++){
+            Assert.assertTrue(IsElementExists(products.get(i),locSticker));
+        }
+    }
 
     //Поиск элемента
     public List<WebElement> seachElements(By locator) {
@@ -20,16 +31,16 @@ public class ProductStickers extends WebDriverSettings{
         return links;
     }
 
-    @Test
-    public void availabilityStickers () throws InterruptedException {
-
-        driver.get("http://localhost//litecart/en/");
-        Thread.sleep(1000);
-
-        List<WebElement> products = seachElements(locatorProducts);
-        List<WebElement> stickers = seachElements(locatorSticker);
-
-        Assert.assertTrue(products.size()==stickers.size());
+    public static Boolean IsElementExists(WebElement elem,By locator)
+    {
+        try
+        {
+            elem.findElement(locator);
+            return true;
+        }
+        catch (NoSuchElementException e)
+        {
+            return false;
+        }
     }
-
 }
